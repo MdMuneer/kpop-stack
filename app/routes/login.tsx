@@ -35,6 +35,7 @@ export const action: ActionFunction = async ({ request }) => {
   const password = formData.get("password");
   const redirectTo = formData.get("redirectTo");
   const remember = formData.get("remember");
+  console.log('hello')
 
   if (!validateEmail(email)) {
     return json({ errors: { email: "Email is invalid." } }, { status: 400 });
